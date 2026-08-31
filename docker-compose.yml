@@ -1,0 +1,19 @@
+services:
+    clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    restart: always
+    container_name: clickhouse
+    environment:
+      CLICKHOUSE_DB: "DataEngineeringDB"
+      CLICKHOUSE_USER: "admin"
+      CLICKHOUSE_PASSWORD: "ClickHouse@2026"
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - clickhouse_logs:/var/log/clickhouse
+
+volumes:
+  clickhouse_data:
+  clickhouse_logs:
