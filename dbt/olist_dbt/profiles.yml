@@ -1,0 +1,13 @@
+olist_dbt:
+  target: dev
+
+  outputs:
+    dev:
+      type: clickhouse
+      schema: DataEngineeringDB
+      host: localhost
+      port: 8124
+      user: admin
+      password: "ClickHouse@2026"
+      secure: false
+      threads: 4
