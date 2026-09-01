@@ -8,3 +8,6 @@
 7. Membuat models(dimmension & facts)
 8. Membuat coding extract_olist.py, creae_staging_tables.py, load_olist.py, transform_olist.py
 9. membuat coding dbt_project.yml, schema.yml
+10. Install Prefect
+11. Membuat coding coding olist_flow.py(extract_olist.py, load_olist, olist_dbt)
+12. Run olist_flow.py (EXTRACT, LOAD TO CLICKHOUSE, DBT RUN, DBT TEST)
