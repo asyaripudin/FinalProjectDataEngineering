@@ -4876,3 +4876,1610 @@ having count(*) > 1
 [0m08:31:36.705528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000280E03F8950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000280E12EE8E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000280E12EFEE0>]}
 [0m08:31:36.706235 [debug] [MainThread]: Flushing usage events
 [0m08:31:38.357189 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:10:13.854539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000290874F27B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029089B33ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029089B33C50>]}
+
+
+============================== 10:10:13.860183 | 62b15535-f904-4cbb-aee3-de241faf8f02 ==============================
+[0m10:10:13.860183 [info ] [MainThread]: Running with dbt=1.12.3
+[0m10:10:13.860982 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\FinalProjectDataEngineering\\dbt\\olist_dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_path': 'C:\\FinalProjectDataEngineering\\dbt\\olist_dbt\\logs'}
+[0m10:10:14.232300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000290879F76F0>]}
+[0m10:10:14.365642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029089ABDF20>]}
+[0m10:10:14.367174 [info ] [MainThread]: Registered adapter: clickhouse=1.9.3
+[0m10:10:14.831814 [debug] [MainThread]: checksum: f66eea3b2864790e601c07e692e97e4609172a648837c06638cf82cd70740dff, vars: {}, profile: olist_dbt, target: dev, version: 1.12.3
+[0m10:10:15.108762 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:10:15.109253 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m10:10:15.109635 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:10:15.123349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908A5A5D50>]}
+[0m10:10:15.294677 [debug] [MainThread]: Wrote artifact WritableManifest to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\manifest.json
+[0m10:10:15.299676 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\semantic_manifest.json
+[0m10:10:15.329904 [debug] [MainThread]: Wrote artifact OsiDocument to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\osi_document.json
+[0m10:10:15.345654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908A74A8A0>]}
+[0m10:10:15.346242 [info ] [MainThread]: Found 8 models, 20 data tests, 521 macros
+[0m10:10:15.346801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908A743310>]}
+[0m10:10:15.349781 [info ] [MainThread]: 
+[0m10:10:15.350255 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:10:15.350679 [info ] [MainThread]: 
+[0m10:10:15.351339 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m10:10:15.361805 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list_'
+[0m10:10:15.377877 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:10:15.997322 [debug] [ThreadPool]: dbt_clickhouse adapter: On list_: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "connection_name": "list_"} */
+
+    select name from system.databases
+  ...
+[0m10:10:16.047403 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:16.168722 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list__DataEngineeringDB'
+[0m10:10:16.174477 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:10:16.729841 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__DataEngineeringDB: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "connection_name": "list__DataEngineeringDB"} */
+select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        engine in ('MaterializedView', 'View'), 'view',
+        engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,0 as is_on_cluster
+          from system.tables as t join system.databases as db on t.database = db.name
+        where schema = 'DataEngineeringDB'
+      
+
+  ...
+[0m10:10:16.849279 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.12 seconds
+[0m10:10:16.860596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908A9CC6D0>]}
+[0m10:10:16.867644 [debug] [Thread-4 (]: Began running node model.olist_dbt.dim_seller
+[0m10:10:16.868370 [debug] [Thread-3 (]: Began running node model.olist_dbt.dim_product
+[0m10:10:16.869104 [debug] [Thread-1 (]: Began running node model.olist_dbt.dim_customer
+[0m10:10:16.870032 [info ] [Thread-4 (]: 4 of 8 START sql table model `DataEngineeringDB`.`dim_seller` .................. [RUN]
+[0m10:10:16.870980 [debug] [Thread-2 (]: Began running node model.olist_dbt.dim_geolocation
+[0m10:10:16.871830 [info ] [Thread-3 (]: 3 of 8 START sql table model `DataEngineeringDB`.`dim_product` ................. [RUN]
+[0m10:10:16.873072 [info ] [Thread-1 (]: 1 of 8 START sql table model `DataEngineeringDB`.`dim_customer` ................ [RUN]
+[0m10:10:16.874070 [debug] [Thread-4 (]: Acquiring new clickhouse connection 'model.olist_dbt.dim_seller'
+[0m10:10:16.874848 [info ] [Thread-2 (]: 2 of 8 START sql table model `DataEngineeringDB`.`dim_geolocation` ............. [RUN]
+[0m10:10:16.875868 [debug] [Thread-3 (]: Acquiring new clickhouse connection 'model.olist_dbt.dim_product'
+[0m10:10:16.876594 [debug] [Thread-1 (]: Acquiring new clickhouse connection 'model.olist_dbt.dim_customer'
+[0m10:10:16.877124 [debug] [Thread-4 (]: Began compiling node model.olist_dbt.dim_seller
+[0m10:10:16.877786 [debug] [Thread-2 (]: Acquiring new clickhouse connection 'model.olist_dbt.dim_geolocation'
+[0m10:10:16.878309 [debug] [Thread-3 (]: Began compiling node model.olist_dbt.dim_product
+[0m10:10:16.878803 [debug] [Thread-1 (]: Began compiling node model.olist_dbt.dim_customer
+[0m10:10:16.884905 [debug] [Thread-2 (]: Began compiling node model.olist_dbt.dim_geolocation
+[0m10:10:16.887490 [debug] [Thread-4 (]: Writing injected SQL for node "model.olist_dbt.dim_seller"
+[0m10:10:16.888785 [debug] [Thread-3 (]: Writing injected SQL for node "model.olist_dbt.dim_product"
+[0m10:10:16.889995 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_dbt.dim_customer"
+[0m10:10:16.890994 [debug] [Thread-2 (]: Writing injected SQL for node "model.olist_dbt.dim_geolocation"
+[0m10:10:16.892923 [debug] [Thread-4 (]: Began executing node model.olist_dbt.dim_seller
+[0m10:10:16.950366 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:10:16.952361 [debug] [Thread-1 (]: Began executing node model.olist_dbt.dim_customer
+[0m10:10:16.953134 [debug] [Thread-2 (]: Began executing node model.olist_dbt.dim_geolocation
+[0m10:10:16.953823 [debug] [Thread-3 (]: Began executing node model.olist_dbt.dim_product
+[0m10:10:16.957047 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:10:16.963518 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:10:16.967429 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:10:17.449967 [debug] [Thread-4 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_seller: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_seller"} */
+
+            
+
+    
+        create table `DataEngineeringDB`.`dim_seller__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            SELECT
+    seller_id,
+    seller_zip_code_prefix,
+    seller_city,
+    seller_state
+FROM DataEngineeringDB.stg_sellers
+          )
+        
+        ...
+[0m10:10:17.477728 [debug] [Thread-3 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_product"} */
+
+            
+
+    
+        create table `DataEngineeringDB`.`dim_product__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            SELECT
+    p.product_id,
+    p.product_category_name,
+    t.product_category_name_english,
+    p.product_name_lenght,
+    p.product_description_lenght,
+    p.product_photos_qty,
+    p.product_weight_g,
+    p.product_length_cm,
+    p.product_height_cm,
+    p.product_width_cm
+FROM DataEngineeringDB.stg_products AS p
+
+LEFT JOIN DataEngineeringDB.stg_product_category_translation AS t
+    ON p.product_category_name = t.product_category_name
+          )
+        
+        ...
+[0m10:10:17.481596 [debug] [Thread-2 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_geolocation: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_geolocation"} */
+
+            
+
+    
+        create table `DataEngineeringDB`.`dim_geolocation__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            SELECT
+    geolocation_zip_code_prefix,
+    geolocation_lat,
+    geolocation_lng,
+    geolocation_city,
+    geolocation_state
+FROM DataEngineeringDB.stg_geolocation
+          )
+        
+        ...
+[0m10:10:17.483616 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_customer: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_customer"} */
+
+            
+
+    
+        create table `DataEngineeringDB`.`dim_customer__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            SELECT
+    customer_id,
+    customer_unique_id,
+    customer_zip_code_prefix,
+    customer_city,
+    customer_state
+FROM DataEngineeringDB.stg_customers
+          )
+        
+        ...
+[0m10:10:17.505811 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.526135 [debug] [Thread-4 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_seller: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_seller"} */
+
+    select name, type from system.columns where table = 'dim_seller__dbt_backup'
+    
+      and database = 'DataEngineeringDB'
+    
+    order by position
+  ...
+[0m10:10:17.531639 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.534259 [debug] [Thread-3 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_product"} */
+
+    select name, type from system.columns where table = 'dim_product__dbt_backup'
+    
+      and database = 'DataEngineeringDB'
+    
+    order by position
+  ...
+[0m10:10:17.536748 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.540462 [debug] [Thread-2 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_geolocation: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_geolocation"} */
+
+    select name, type from system.columns where table = 'dim_geolocation__dbt_backup'
+    
+      and database = 'DataEngineeringDB'
+    
+    order by position
+  ...
+[0m10:10:17.542859 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:17.545624 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_customer: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_customer"} */
+
+    select name, type from system.columns where table = 'dim_customer__dbt_backup'
+    
+      and database = 'DataEngineeringDB'
+    
+    order by position
+  ...
+[0m10:10:17.577482 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.583701 [debug] [Thread-4 (]: Writing runtime sql for node "model.olist_dbt.dim_seller"
+[0m10:10:17.585078 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.588345 [debug] [Thread-3 (]: Writing runtime sql for node "model.olist_dbt.dim_product"
+[0m10:10:17.589480 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.591612 [debug] [Thread-2 (]: Writing runtime sql for node "model.olist_dbt.dim_geolocation"
+[0m10:10:17.592773 [debug] [Thread-4 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_seller: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_seller"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `DataEngineeringDB`.`dim_seller__dbt_backup`
+        ("seller_id", "seller_zip_code_prefix", "seller_city", "seller_state")SELECT
+    seller_id,
+    seller_zip_code_prefix,
+    seller_city,
+    seller_state
+FROM DataEngineeringDB.stg_sellers
+  ...
+[0m10:10:17.593772 [debug] [Thread-3 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_product"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `DataEngineeringDB`.`dim_product__dbt_backup`
+        ("product_id", "product_category_name", "product_category_name_english", "product_name_lenght", "product_description_lenght", "product_photos_qty", "product_weight_g", "product_length_cm", "product_height_cm", "product_width_cm")SELECT
+    p.product_id,
+    p.product_category_name,
+    t.product_category_name_english,
+    p.product_name_lenght,
+    p.product_description_lenght,
+    p.product_photos_qty,
+    p.product_weight_g,
+    p.product_length_cm,
+    p.product_height_cm,
+    p.product_width_cm
+FROM DataEngineeringDB.stg_products AS p
+
+LEFT JOIN DataEngineeringDB.stg_product_category_translation AS t
+    ON p.product_category_name = t.product_category_name
+  ...
+[0m10:10:17.596566 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.599551 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_dbt.dim_customer"
+[0m10:10:17.600508 [debug] [Thread-2 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_geolocation: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_geolocation"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `DataEngineeringDB`.`dim_geolocation__dbt_backup`
+        ("geolocation_zip_code_prefix", "geolocation_lat", "geolocation_lng", "geolocation_city", "geolocation_state")SELECT
+    geolocation_zip_code_prefix,
+    geolocation_lat,
+    geolocation_lng,
+    geolocation_city,
+    geolocation_state
+FROM DataEngineeringDB.stg_geolocation
+  ...
+[0m10:10:17.603693 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_customer: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_customer"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `DataEngineeringDB`.`dim_customer__dbt_backup`
+        ("customer_id", "customer_unique_id", "customer_zip_code_prefix", "customer_city", "customer_state")SELECT
+    customer_id,
+    customer_unique_id,
+    customer_zip_code_prefix,
+    customer_city,
+    customer_state
+FROM DataEngineeringDB.stg_customers
+  ...
+[0m10:10:17.652719 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:17.663766 [debug] [Thread-4 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_seller: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_seller"} */
+EXCHANGE TABLES `DataEngineeringDB`.`dim_seller__dbt_backup` AND `DataEngineeringDB`.`dim_seller` 
+  
+  ...
+[0m10:10:17.686670 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.09 seconds
+[0m10:10:17.688893 [debug] [Thread-3 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_product"} */
+EXCHANGE TABLES `DataEngineeringDB`.`dim_product__dbt_backup` AND `DataEngineeringDB`.`dim_product` 
+  
+  ...
+[0m10:10:17.693801 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m10:10:17.734791 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.07 seconds
+[0m10:10:17.741846 [debug] [Thread-3 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_product: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_product"} */
+drop table if exists `DataEngineeringDB`.`dim_product__dbt_backup` 
+  ...
+[0m10:10:17.742826 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.14 seconds
+[0m10:10:17.747063 [debug] [Thread-4 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_seller: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_seller"} */
+drop table if exists `DataEngineeringDB`.`dim_seller__dbt_backup` 
+  ...
+[0m10:10:17.750572 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_customer: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_customer"} */
+EXCHANGE TABLES `DataEngineeringDB`.`dim_customer__dbt_backup` AND `DataEngineeringDB`.`dim_customer` 
+  
+  ...
+[0m10:10:17.754483 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m10:10:17.760683 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908AE21C10>]}
+[0m10:10:17.761865 [info ] [Thread-3 (]: 3 of 8 OK created sql table model `DataEngineeringDB`.`dim_product` ............ [[32mOK[0m in 0.88s]
+[0m10:10:17.763017 [debug] [Thread-3 (]: Finished running node model.olist_dbt.dim_product
+[0m10:10:17.763712 [debug] [Thread-3 (]: Began running node model.olist_dbt.fact_order
+[0m10:10:17.764610 [info ] [Thread-3 (]: 5 of 8 START sql table model `DataEngineeringDB`.`fact_order` .................. [RUN]
+[0m10:10:17.765366 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.olist_dbt.dim_product, now model.olist_dbt.fact_order)
+[0m10:10:17.765907 [debug] [Thread-3 (]: Began compiling node model.olist_dbt.fact_order
+[0m10:10:17.767364 [debug] [Thread-3 (]: Writing injected SQL for node "model.olist_dbt.fact_order"
+[0m10:10:17.769449 [debug] [Thread-3 (]: Began executing node model.olist_dbt.fact_order
+[0m10:10:17.775329 [debug] [Thread-3 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order"} */
+
+            
+
+    
+        create table `DataEngineeringDB`.`fact_order__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            SELECT
+    order_id,
+    customer_id,
+    order_status,
+
+    parseDateTimeBestEffortOrNull(order_purchase_timestamp)
+        AS order_purchase_timestamp,
+
+    parseDateTimeBestEffortOrNull(order_approved_at)
+        AS order_approved_at,
+
+    parseDateTimeBestEffortOrNull(order_delivered_carrier_date)
+        AS order_delivered_carrier_date,
+
+    parseDateTimeBestEffortOrNull(order_delivered_customer_date)
+        AS order_delivered_customer_date,
+
+    parseDateTimeBestEffortOrNull(order_estimated_delivery_date)
+        AS order_estimated_delivery_date
+
+FROM DataEngineeringDB.stg_orders
+          )
+        
+        ...
+[0m10:10:17.798344 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.799556 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.802913 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908AE0C260>]}
+[0m10:10:17.809434 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_customer: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_customer"} */
+drop table if exists `DataEngineeringDB`.`dim_customer__dbt_backup` 
+  ...
+[0m10:10:17.810615 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.21 seconds
+[0m10:10:17.811668 [info ] [Thread-4 (]: 4 of 8 OK created sql table model `DataEngineeringDB`.`dim_seller` ............. [[32mOK[0m in 0.93s]
+[0m10:10:17.814481 [debug] [Thread-2 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_geolocation: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_geolocation"} */
+EXCHANGE TABLES `DataEngineeringDB`.`dim_geolocation__dbt_backup` AND `DataEngineeringDB`.`dim_geolocation` 
+  
+  ...
+[0m10:10:17.815580 [debug] [Thread-4 (]: Finished running node model.olist_dbt.dim_seller
+[0m10:10:17.817795 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m10:10:17.818788 [debug] [Thread-4 (]: Began running node model.olist_dbt.fact_order_item
+[0m10:10:17.821620 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908AFB8CD0>]}
+[0m10:10:17.822592 [info ] [Thread-4 (]: 6 of 8 START sql table model `DataEngineeringDB`.`fact_order_item` ............. [RUN]
+[0m10:10:17.823810 [info ] [Thread-1 (]: 1 of 8 OK created sql table model `DataEngineeringDB`.`dim_customer` ........... [[32mOK[0m in 0.95s]
+[0m10:10:17.824726 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.olist_dbt.dim_seller, now model.olist_dbt.fact_order_item)
+[0m10:10:17.825907 [debug] [Thread-1 (]: Finished running node model.olist_dbt.dim_customer
+[0m10:10:17.826779 [debug] [Thread-4 (]: Began compiling node model.olist_dbt.fact_order_item
+[0m10:10:17.827739 [debug] [Thread-1 (]: Began running node model.olist_dbt.fact_order_payment
+[0m10:10:17.830102 [debug] [Thread-4 (]: Writing injected SQL for node "model.olist_dbt.fact_order_item"
+[0m10:10:17.831246 [info ] [Thread-1 (]: 7 of 8 START sql table model `DataEngineeringDB`.`fact_order_payment` .......... [RUN]
+[0m10:10:17.832974 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.olist_dbt.dim_customer, now model.olist_dbt.fact_order_payment)
+[0m10:10:17.834167 [debug] [Thread-1 (]: Began compiling node model.olist_dbt.fact_order_payment
+[0m10:10:17.835608 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:17.837715 [debug] [Thread-1 (]: Writing injected SQL for node "model.olist_dbt.fact_order_payment"
+[0m10:10:17.842497 [debug] [Thread-3 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order"} */
+
+    select name, type from system.columns where table = 'fact_order__dbt_backup'
+    
+      and database = 'DataEngineeringDB'
+    
+    order by position
+  ...
+[0m10:10:17.844501 [debug] [Thread-4 (]: Began executing node model.olist_dbt.fact_order_item
+[0m10:10:17.850489 [debug] [Thread-4 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_item: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_item"} */
+
+            
+
+    
+        create table `DataEngineeringDB`.`fact_order_item__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            SELECT
+    order_id,
+    order_item_id,
+    product_id,
+    seller_id,
+
+    parseDateTimeBestEffortOrNull(shipping_limit_date)
+        AS shipping_limit_date,
+
+    price,
+    freight_value,
+
+    price + freight_value AS item_total_value
+
+FROM DataEngineeringDB.stg_order_items
+          )
+        
+        ...
+[0m10:10:17.852904 [debug] [Thread-1 (]: Began executing node model.olist_dbt.fact_order_payment
+[0m10:10:17.857599 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_payment: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_payment"} */
+
+            
+
+    
+        create table `DataEngineeringDB`.`fact_order_payment__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            SELECT
+    order_id,
+    payment_sequential,
+    payment_type,
+    payment_installments,
+    payment_value
+FROM DataEngineeringDB.stg_order_payments
+          )
+        
+        ...
+[0m10:10:17.862032 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.866669 [debug] [Thread-2 (]: dbt_clickhouse adapter: On model.olist_dbt.dim_geolocation: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.dim_geolocation"} */
+drop table if exists `DataEngineeringDB`.`dim_geolocation__dbt_backup` 
+  ...
+[0m10:10:17.901029 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:17.904073 [debug] [Thread-3 (]: Writing runtime sql for node "model.olist_dbt.fact_order"
+[0m10:10:17.906354 [debug] [Thread-3 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `DataEngineeringDB`.`fact_order__dbt_backup`
+        ("order_id", "customer_id", "order_status", "order_purchase_timestamp", "order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date")SELECT
+    order_id,
+    customer_id,
+    order_status,
+
+    parseDateTimeBestEffortOrNull(order_purchase_timestamp)
+        AS order_purchase_timestamp,
+
+    parseDateTimeBestEffortOrNull(order_approved_at)
+        AS order_approved_at,
+
+    parseDateTimeBestEffortOrNull(order_delivered_carrier_date)
+        AS order_delivered_carrier_date,
+
+    parseDateTimeBestEffortOrNull(order_delivered_customer_date)
+        AS order_delivered_customer_date,
+
+    parseDateTimeBestEffortOrNull(order_estimated_delivery_date)
+        AS order_estimated_delivery_date
+
+FROM DataEngineeringDB.stg_orders
+  ...
+[0m10:10:17.913612 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:17.917327 [debug] [Thread-4 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_item: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_item"} */
+
+    select name, type from system.columns where table = 'fact_order_item__dbt_backup'
+    
+      and database = 'DataEngineeringDB'
+    
+    order by position
+  ...
+[0m10:10:17.918811 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.921469 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:17.924092 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908ACC6E50>]}
+[0m10:10:17.927214 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_payment: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_payment"} */
+
+    select name, type from system.columns where table = 'fact_order_payment__dbt_backup'
+    
+      and database = 'DataEngineeringDB'
+    
+    order by position
+  ...
+[0m10:10:17.928359 [info ] [Thread-2 (]: 2 of 8 OK created sql table model `DataEngineeringDB`.`dim_geolocation` ........ [[32mOK[0m in 1.05s]
+[0m10:10:17.930750 [debug] [Thread-2 (]: Finished running node model.olist_dbt.dim_geolocation
+[0m10:10:17.931636 [debug] [Thread-2 (]: Began running node model.olist_dbt.fact_order_review
+[0m10:10:17.932692 [info ] [Thread-2 (]: 8 of 8 START sql table model `DataEngineeringDB`.`fact_order_review` ........... [RUN]
+[0m10:10:17.933500 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.olist_dbt.dim_geolocation, now model.olist_dbt.fact_order_review)
+[0m10:10:17.934108 [debug] [Thread-2 (]: Began compiling node model.olist_dbt.fact_order_review
+[0m10:10:17.936120 [debug] [Thread-2 (]: Writing injected SQL for node "model.olist_dbt.fact_order_review"
+[0m10:10:17.938313 [debug] [Thread-2 (]: Began executing node model.olist_dbt.fact_order_review
+[0m10:10:17.943212 [debug] [Thread-2 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_review: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_review"} */
+
+            
+
+    
+        create table `DataEngineeringDB`.`fact_order_review__dbt_backup`
+        
+  
+        
+  engine = MergeTree()
+        
+      order by (tuple())
+        
+        
+        
+        
+                    -- end_of_sql
+                    SETTINGS replicated_deduplication_window='0'
+
+                    
+            empty
+          as (
+            SELECT
+    review_id,
+    order_id,
+    review_score,
+    review_comment_title,
+    review_comment_message,
+
+    parseDateTimeBestEffortOrNull(review_creation_date)
+        AS review_creation_date,
+
+    parseDateTimeBestEffortOrNull(review_answer_timestamp)
+        AS review_answer_timestamp
+
+FROM DataEngineeringDB.stg_order_reviews
+          )
+        
+        ...
+[0m10:10:17.968116 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.971981 [debug] [Thread-4 (]: Writing runtime sql for node "model.olist_dbt.fact_order_item"
+[0m10:10:17.974338 [debug] [Thread-4 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_item: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_item"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `DataEngineeringDB`.`fact_order_item__dbt_backup`
+        ("order_id", "order_item_id", "product_id", "seller_id", "shipping_limit_date", "price", "freight_value", "item_total_value")SELECT
+    order_id,
+    order_item_id,
+    product_id,
+    seller_id,
+
+    parseDateTimeBestEffortOrNull(shipping_limit_date)
+        AS shipping_limit_date,
+
+    price,
+    freight_value,
+
+    price + freight_value AS item_total_value
+
+FROM DataEngineeringDB.stg_order_items
+  ...
+[0m10:10:17.980080 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:17.982654 [debug] [Thread-1 (]: Writing runtime sql for node "model.olist_dbt.fact_order_payment"
+[0m10:10:17.984762 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_payment: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_payment"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `DataEngineeringDB`.`fact_order_payment__dbt_backup`
+        ("order_id", "payment_sequential", "payment_type", "payment_installments", "payment_value")SELECT
+    order_id,
+    payment_sequential,
+    payment_type,
+    payment_installments,
+    payment_value
+FROM DataEngineeringDB.stg_order_payments
+  ...
+[0m10:10:17.999796 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:18.004625 [debug] [Thread-2 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_review: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_review"} */
+
+    select name, type from system.columns where table = 'fact_order_review__dbt_backup'
+    
+      and database = 'DataEngineeringDB'
+    
+    order by position
+  ...
+[0m10:10:18.054548 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:18.057688 [debug] [Thread-2 (]: Writing runtime sql for node "model.olist_dbt.fact_order_review"
+[0m10:10:18.060304 [debug] [Thread-2 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_review: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_review"} */
+
+  
+    
+    
+    
+        
+         
+
+
+        insert into `DataEngineeringDB`.`fact_order_review__dbt_backup`
+        ("review_id", "order_id", "review_score", "review_comment_title", "review_comment_message", "review_creation_date", "review_answer_timestamp")SELECT
+    review_id,
+    order_id,
+    review_score,
+    review_comment_title,
+    review_comment_message,
+
+    parseDateTimeBestEffortOrNull(review_creation_date)
+        AS review_creation_date,
+
+    parseDateTimeBestEffortOrNull(review_answer_timestamp)
+        AS review_answer_timestamp
+
+FROM DataEngineeringDB.stg_order_reviews
+  ...
+[0m10:10:18.077026 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.09 seconds
+[0m10:10:18.080347 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_payment: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_payment"} */
+EXCHANGE TABLES `DataEngineeringDB`.`fact_order_payment__dbt_backup` AND `DataEngineeringDB`.`fact_order_payment` 
+  
+  ...
+[0m10:10:18.086427 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.00 seconds
+[0m10:10:18.093281 [debug] [Thread-1 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_payment: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_payment"} */
+drop table if exists `DataEngineeringDB`.`fact_order_payment__dbt_backup` 
+  ...
+[0m10:10:18.094514 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.19 seconds
+[0m10:10:18.097648 [debug] [Thread-3 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order"} */
+EXCHANGE TABLES `DataEngineeringDB`.`fact_order__dbt_backup` AND `DataEngineeringDB`.`fact_order` 
+  
+  ...
+[0m10:10:18.101552 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m10:10:18.105644 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908ACBB2A0>]}
+[0m10:10:18.107367 [info ] [Thread-1 (]: 7 of 8 OK created sql table model `DataEngineeringDB`.`fact_order_payment` ..... [[32mOK[0m in 0.27s]
+[0m10:10:18.109244 [debug] [Thread-1 (]: Finished running node model.olist_dbt.fact_order_payment
+[0m10:10:18.142994 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.04 seconds
+[0m10:10:18.151517 [debug] [Thread-3 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order"} */
+drop table if exists `DataEngineeringDB`.`fact_order__dbt_backup` 
+  ...
+[0m10:10:18.167970 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.19 seconds
+[0m10:10:18.171448 [debug] [Thread-4 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_item: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_item"} */
+EXCHANGE TABLES `DataEngineeringDB`.`fact_order_item__dbt_backup` AND `DataEngineeringDB`.`fact_order_item` 
+  
+  ...
+[0m10:10:18.211514 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.04 seconds
+[0m10:10:18.220144 [debug] [Thread-4 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_item: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_item"} */
+drop table if exists `DataEngineeringDB`.`fact_order_item__dbt_backup` 
+  ...
+[0m10:10:18.222143 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.07 seconds
+[0m10:10:18.227859 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908AE58DD0>]}
+[0m10:10:18.229809 [info ] [Thread-3 (]: 5 of 8 OK created sql table model `DataEngineeringDB`.`fact_order` ............. [[32mOK[0m in 0.46s]
+[0m10:10:18.231925 [debug] [Thread-3 (]: Finished running node model.olist_dbt.fact_order
+[0m10:10:18.283570 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:18.287595 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908AE022D0>]}
+[0m10:10:18.288758 [info ] [Thread-4 (]: 6 of 8 OK created sql table model `DataEngineeringDB`.`fact_order_item` ........ [[32mOK[0m in 0.46s]
+[0m10:10:18.290003 [debug] [Thread-4 (]: Finished running node model.olist_dbt.fact_order_item
+[0m10:10:18.309624 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.25 seconds
+[0m10:10:18.312608 [debug] [Thread-2 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_review: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_review"} */
+EXCHANGE TABLES `DataEngineeringDB`.`fact_order_review__dbt_backup` AND `DataEngineeringDB`.`fact_order_review` 
+  
+  ...
+[0m10:10:18.318888 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.01 seconds
+[0m10:10:18.325174 [debug] [Thread-2 (]: dbt_clickhouse adapter: On model.olist_dbt.fact_order_review: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "model.olist_dbt.fact_order_review"} */
+drop table if exists `DataEngineeringDB`.`fact_order_review__dbt_backup` 
+  ...
+[0m10:10:18.370292 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.04 seconds
+[0m10:10:18.373370 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '62b15535-f904-4cbb-aee3-de241faf8f02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908B0A9D30>]}
+[0m10:10:18.374491 [info ] [Thread-2 (]: 8 of 8 OK created sql table model `DataEngineeringDB`.`fact_order_review` ...... [[32mOK[0m in 0.44s]
+[0m10:10:18.375824 [debug] [Thread-2 (]: Finished running node model.olist_dbt.fact_order_review
+[0m10:10:18.378677 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:10:18.379382 [debug] [MainThread]: Connection 'list_' was left open.
+[0m10:10:18.380002 [debug] [MainThread]: On list_: Close
+[0m10:10:18.380555 [debug] [MainThread]: Connection 'list__DataEngineeringDB' was left open.
+[0m10:10:18.381124 [debug] [MainThread]: On list__DataEngineeringDB: Close
+[0m10:10:18.381685 [debug] [MainThread]: Connection 'model.olist_dbt.fact_order_item' was left open.
+[0m10:10:18.382261 [debug] [MainThread]: On model.olist_dbt.fact_order_item: Close
+[0m10:10:18.382765 [debug] [MainThread]: Connection 'model.olist_dbt.fact_order' was left open.
+[0m10:10:18.383385 [debug] [MainThread]: On model.olist_dbt.fact_order: Close
+[0m10:10:18.383974 [debug] [MainThread]: Connection 'model.olist_dbt.fact_order_payment' was left open.
+[0m10:10:18.384597 [debug] [MainThread]: On model.olist_dbt.fact_order_payment: Close
+[0m10:10:18.385140 [debug] [MainThread]: Connection 'model.olist_dbt.fact_order_review' was left open.
+[0m10:10:18.385751 [debug] [MainThread]: On model.olist_dbt.fact_order_review: Close
+[0m10:10:18.388069 [info ] [MainThread]: 
+[0m10:10:18.388850 [info ] [MainThread]: Finished running 8 table models in 0 hours 0 minutes and 3.04 seconds (3.04s).
+[0m10:10:18.392394 [debug] [MainThread]: Command end result
+[0m10:10:18.481858 [debug] [MainThread]: Wrote artifact WritableManifest to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\manifest.json
+[0m10:10:18.491493 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\semantic_manifest.json
+[0m10:10:18.498784 [debug] [MainThread]: Wrote artifact OsiDocument to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\osi_document.json
+[0m10:10:18.514876 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\run_results.json
+[0m10:10:18.515723 [info ] [MainThread]: 
+[0m10:10:18.516660 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:10:18.517308 [info ] [MainThread]: 
+[0m10:10:18.517984 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=8
+[0m10:10:18.520135 [debug] [MainThread]: Command `dbt run` succeeded at 10:10:18.519880 after 4.97 seconds
+[0m10:10:18.520872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029089B0B050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908A67EC90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002908B04CCB0>]}
+[0m10:10:18.521521 [debug] [MainThread]: Flushing usage events
+[0m10:10:20.532366 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:10:23.701084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8ACD27B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8D31BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8D31BC50>]}
+
+
+============================== 10:10:23.706264 | 29b21e68-b358-4f7d-bae8-71c5b8adfe79 ==============================
+[0m10:10:23.706264 [info ] [MainThread]: Running with dbt=1.12.3
+[0m10:10:23.707143 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\FinalProjectDataEngineering\\dbt\\olist_dbt', 'invocation_command': 'dbt test', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\FinalProjectDataEngineering\\dbt\\olist_dbt\\logs'}
+[0m10:10:24.111269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '29b21e68-b358-4f7d-bae8-71c5b8adfe79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8B1D76F0>]}
+[0m10:10:24.271420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '29b21e68-b358-4f7d-bae8-71c5b8adfe79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8D299F20>]}
+[0m10:10:24.273188 [info ] [MainThread]: Registered adapter: clickhouse=1.9.3
+[0m10:10:24.722156 [debug] [MainThread]: checksum: f66eea3b2864790e601c07e692e97e4609172a648837c06638cf82cd70740dff, vars: {}, profile: olist_dbt, target: dev, version: 1.12.3
+[0m10:10:24.996908 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:10:24.997482 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m10:10:24.997936 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:10:25.011280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '29b21e68-b358-4f7d-bae8-71c5b8adfe79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8DE29D50>]}
+[0m10:10:25.186943 [debug] [MainThread]: Wrote artifact WritableManifest to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\manifest.json
+[0m10:10:25.192035 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\semantic_manifest.json
+[0m10:10:25.219887 [debug] [MainThread]: Wrote artifact OsiDocument to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\osi_document.json
+[0m10:10:25.251755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '29b21e68-b358-4f7d-bae8-71c5b8adfe79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8DFE5F40>]}
+[0m10:10:25.252366 [info ] [MainThread]: Found 8 models, 20 data tests, 521 macros
+[0m10:10:25.252854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '29b21e68-b358-4f7d-bae8-71c5b8adfe79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8E016F90>]}
+[0m10:10:25.256551 [info ] [MainThread]: 
+[0m10:10:25.257045 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:10:25.257479 [info ] [MainThread]: 
+[0m10:10:25.258163 [debug] [MainThread]: Acquiring new clickhouse connection 'master'
+[0m10:10:25.266768 [debug] [ThreadPool]: Acquiring new clickhouse connection 'list__DataEngineeringDB'
+[0m10:10:25.281991 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:10:25.912643 [debug] [ThreadPool]: dbt_clickhouse adapter: On list__DataEngineeringDB: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "connection_name": "list__DataEngineeringDB"} */
+select
+      t.name as name,
+      t.database as schema,
+      multiIf(
+        engine in ('MaterializedView', 'View'), 'view',
+        engine = 'Dictionary', 'dictionary',
+        'table'
+      ) as type,
+      db.engine as db_engine,0 as is_on_cluster
+          from system.tables as t join system.databases as db on t.database = db.name
+        where schema = 'DataEngineeringDB'
+      
+
+  ...
+[0m10:10:25.971827 [debug] [ThreadPool]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:26.089045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '29b21e68-b358-4f7d-bae8-71c5b8adfe79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8E59CBB0>]}
+[0m10:10:26.093923 [debug] [Thread-3 (]: Began running node test.olist_dbt.not_null_dim_geolocation_geolocation_zip_code_prefix.df598c671c
+[0m10:10:26.094545 [debug] [Thread-2 (]: Began running node test.olist_dbt.not_null_dim_customer_customer_unique_id.0020205ea4
+[0m10:10:26.095074 [debug] [Thread-4 (]: Began running node test.olist_dbt.not_null_dim_product_product_id.02b1f06816
+[0m10:10:26.095559 [debug] [Thread-1 (]: Began running node test.olist_dbt.not_null_dim_customer_customer_id.9775012dfc
+[0m10:10:26.096113 [info ] [Thread-3 (]: 3 of 20 START test not_null_dim_geolocation_geolocation_zip_code_prefix ........ [RUN]
+[0m10:10:26.096810 [info ] [Thread-2 (]: 2 of 20 START test not_null_dim_customer_customer_unique_id .................... [RUN]
+[0m10:10:26.097551 [info ] [Thread-4 (]: 4 of 20 START test not_null_dim_product_product_id ............................. [RUN]
+[0m10:10:26.098128 [info ] [Thread-1 (]: 1 of 20 START test not_null_dim_customer_customer_id ........................... [RUN]
+[0m10:10:26.098943 [debug] [Thread-3 (]: Acquiring new clickhouse connection 'test.olist_dbt.not_null_dim_geolocation_geolocation_zip_code_prefix.df598c671c'
+[0m10:10:26.099612 [debug] [Thread-2 (]: Acquiring new clickhouse connection 'test.olist_dbt.not_null_dim_customer_customer_unique_id.0020205ea4'
+[0m10:10:26.100268 [debug] [Thread-4 (]: Acquiring new clickhouse connection 'test.olist_dbt.not_null_dim_product_product_id.02b1f06816'
+[0m10:10:26.100938 [debug] [Thread-1 (]: Acquiring new clickhouse connection 'test.olist_dbt.not_null_dim_customer_customer_id.9775012dfc'
+[0m10:10:26.101687 [debug] [Thread-3 (]: Began compiling node test.olist_dbt.not_null_dim_geolocation_geolocation_zip_code_prefix.df598c671c
+[0m10:10:26.102307 [debug] [Thread-2 (]: Began compiling node test.olist_dbt.not_null_dim_customer_customer_unique_id.0020205ea4
+[0m10:10:26.102940 [debug] [Thread-4 (]: Began compiling node test.olist_dbt.not_null_dim_product_product_id.02b1f06816
+[0m10:10:26.103578 [debug] [Thread-1 (]: Began compiling node test.olist_dbt.not_null_dim_customer_customer_id.9775012dfc
+[0m10:10:26.129276 [debug] [Thread-3 (]: Writing injected SQL for node "test.olist_dbt.not_null_dim_geolocation_geolocation_zip_code_prefix.df598c671c"
+[0m10:10:26.137279 [debug] [Thread-2 (]: Writing injected SQL for node "test.olist_dbt.not_null_dim_customer_customer_unique_id.0020205ea4"
+[0m10:10:26.145017 [debug] [Thread-4 (]: Writing injected SQL for node "test.olist_dbt.not_null_dim_product_product_id.02b1f06816"
+[0m10:10:26.156167 [debug] [Thread-1 (]: Writing injected SQL for node "test.olist_dbt.not_null_dim_customer_customer_id.9775012dfc"
+[0m10:10:26.157887 [debug] [Thread-3 (]: Began executing node test.olist_dbt.not_null_dim_geolocation_geolocation_zip_code_prefix.df598c671c
+[0m10:10:26.179348 [debug] [Thread-3 (]: Writing runtime sql for node "test.olist_dbt.not_null_dim_geolocation_geolocation_zip_code_prefix.df598c671c"
+[0m10:10:26.180480 [debug] [Thread-1 (]: Began executing node test.olist_dbt.not_null_dim_customer_customer_id.9775012dfc
+[0m10:10:26.183106 [debug] [Thread-1 (]: Writing runtime sql for node "test.olist_dbt.not_null_dim_customer_customer_id.9775012dfc"
+[0m10:10:26.183671 [debug] [Thread-2 (]: Began executing node test.olist_dbt.not_null_dim_customer_customer_unique_id.0020205ea4
+[0m10:10:26.184156 [debug] [Thread-4 (]: Began executing node test.olist_dbt.not_null_dim_product_product_id.02b1f06816
+[0m10:10:26.186428 [debug] [Thread-2 (]: Writing runtime sql for node "test.olist_dbt.not_null_dim_customer_customer_unique_id.0020205ea4"
+[0m10:10:26.187002 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:10:26.188915 [debug] [Thread-4 (]: Writing runtime sql for node "test.olist_dbt.not_null_dim_product_product_id.02b1f06816"
+[0m10:10:26.190697 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:10:26.193043 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:10:26.193616 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:10:26.704554 [debug] [Thread-1 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_dim_customer_customer_id.9775012dfc: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_dim_customer_customer_id.9775012dfc"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from `DataEngineeringDB`.`dim_customer`
+where customer_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:26.708674 [debug] [Thread-4 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_dim_product_product_id.02b1f06816: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_dim_product_product_id.02b1f06816"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_id
+from `DataEngineeringDB`.`dim_product`
+where product_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:26.716991 [debug] [Thread-2 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_dim_customer_customer_unique_id.0020205ea4: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_dim_customer_customer_unique_id.0020205ea4"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_unique_id
+from `DataEngineeringDB`.`dim_customer`
+where customer_unique_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:26.741723 [debug] [Thread-3 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_dim_geolocation_geolocation_zip_code_prefix.df598c671c: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_dim_geolocation_geolocation_zip_code_prefix.df598c671c"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select geolocation_zip_code_prefix
+from `DataEngineeringDB`.`dim_geolocation`
+where geolocation_zip_code_prefix is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:26.763400 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:26.771736 [info ] [Thread-1 (]: 1 of 20 PASS not_null_dim_customer_customer_id ................................. [[32mPASS[0m in 0.67s]
+[0m10:10:26.773391 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:26.774612 [debug] [Thread-1 (]: Finished running node test.olist_dbt.not_null_dim_customer_customer_id.9775012dfc
+[0m10:10:26.775684 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:26.778823 [info ] [Thread-4 (]: 4 of 20 PASS not_null_dim_product_product_id ................................... [[32mPASS[0m in 0.68s]
+[0m10:10:26.779790 [debug] [Thread-1 (]: Began running node test.olist_dbt.not_null_dim_seller_seller_id.3da5c751a2
+[0m10:10:26.782524 [info ] [Thread-2 (]: 2 of 20 PASS not_null_dim_customer_customer_unique_id .......................... [[32mPASS[0m in 0.68s]
+[0m10:10:26.783603 [debug] [Thread-4 (]: Finished running node test.olist_dbt.not_null_dim_product_product_id.02b1f06816
+[0m10:10:26.784199 [info ] [Thread-1 (]: 5 of 20 START test not_null_dim_seller_seller_id ............................... [RUN]
+[0m10:10:26.785132 [debug] [Thread-2 (]: Finished running node test.olist_dbt.not_null_dim_customer_customer_unique_id.0020205ea4
+[0m10:10:26.785770 [debug] [Thread-4 (]: Began running node test.olist_dbt.not_null_fact_order_customer_id.e16387900a
+[0m10:10:26.786522 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_dim_customer_customer_id.9775012dfc, now test.olist_dbt.not_null_dim_seller_seller_id.3da5c751a2)
+[0m10:10:26.787204 [debug] [Thread-2 (]: Began running node test.olist_dbt.not_null_fact_order_item_order_id.06d73c8b39
+[0m10:10:26.787870 [info ] [Thread-4 (]: 6 of 20 START test not_null_fact_order_customer_id ............................. [RUN]
+[0m10:10:26.788551 [debug] [Thread-1 (]: Began compiling node test.olist_dbt.not_null_dim_seller_seller_id.3da5c751a2
+[0m10:10:26.789133 [info ] [Thread-2 (]: 7 of 20 START test not_null_fact_order_item_order_id ........................... [RUN]
+[0m10:10:26.789870 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_dim_product_product_id.02b1f06816, now test.olist_dbt.not_null_fact_order_customer_id.e16387900a)
+[0m10:10:26.800101 [debug] [Thread-1 (]: Writing injected SQL for node "test.olist_dbt.not_null_dim_seller_seller_id.3da5c751a2"
+[0m10:10:26.800730 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_dim_customer_customer_unique_id.0020205ea4, now test.olist_dbt.not_null_fact_order_item_order_id.06d73c8b39)
+[0m10:10:26.801646 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:26.802242 [debug] [Thread-4 (]: Began compiling node test.olist_dbt.not_null_fact_order_customer_id.e16387900a
+[0m10:10:26.803017 [debug] [Thread-2 (]: Began compiling node test.olist_dbt.not_null_fact_order_item_order_id.06d73c8b39
+[0m10:10:26.805187 [info ] [Thread-3 (]: 3 of 20 PASS not_null_dim_geolocation_geolocation_zip_code_prefix .............. [[32mPASS[0m in 0.71s]
+[0m10:10:26.814870 [debug] [Thread-4 (]: Writing injected SQL for node "test.olist_dbt.not_null_fact_order_customer_id.e16387900a"
+[0m10:10:26.815519 [debug] [Thread-1 (]: Began executing node test.olist_dbt.not_null_dim_seller_seller_id.3da5c751a2
+[0m10:10:26.824108 [debug] [Thread-2 (]: Writing injected SQL for node "test.olist_dbt.not_null_fact_order_item_order_id.06d73c8b39"
+[0m10:10:26.825138 [debug] [Thread-3 (]: Finished running node test.olist_dbt.not_null_dim_geolocation_geolocation_zip_code_prefix.df598c671c
+[0m10:10:26.827991 [debug] [Thread-1 (]: Writing runtime sql for node "test.olist_dbt.not_null_dim_seller_seller_id.3da5c751a2"
+[0m10:10:26.829198 [debug] [Thread-3 (]: Began running node test.olist_dbt.not_null_fact_order_item_order_item_id.9047846fc3
+[0m10:10:26.830299 [debug] [Thread-4 (]: Began executing node test.olist_dbt.not_null_fact_order_customer_id.e16387900a
+[0m10:10:26.831238 [info ] [Thread-3 (]: 8 of 20 START test not_null_fact_order_item_order_item_id ...................... [RUN]
+[0m10:10:26.834046 [debug] [Thread-4 (]: Writing runtime sql for node "test.olist_dbt.not_null_fact_order_customer_id.e16387900a"
+[0m10:10:26.834912 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_dim_geolocation_geolocation_zip_code_prefix.df598c671c, now test.olist_dbt.not_null_fact_order_item_order_item_id.9047846fc3)
+[0m10:10:26.835485 [debug] [Thread-2 (]: Began executing node test.olist_dbt.not_null_fact_order_item_order_id.06d73c8b39
+[0m10:10:26.836323 [debug] [Thread-3 (]: Began compiling node test.olist_dbt.not_null_fact_order_item_order_item_id.9047846fc3
+[0m10:10:26.837037 [debug] [Thread-1 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_dim_seller_seller_id.3da5c751a2: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_dim_seller_seller_id.3da5c751a2"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select seller_id
+from `DataEngineeringDB`.`dim_seller`
+where seller_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:26.840449 [debug] [Thread-2 (]: Writing runtime sql for node "test.olist_dbt.not_null_fact_order_item_order_id.06d73c8b39"
+[0m10:10:26.849636 [debug] [Thread-3 (]: Writing injected SQL for node "test.olist_dbt.not_null_fact_order_item_order_item_id.9047846fc3"
+[0m10:10:26.851271 [debug] [Thread-4 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_fact_order_customer_id.e16387900a: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_fact_order_customer_id.e16387900a"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from `DataEngineeringDB`.`fact_order`
+where customer_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:26.854594 [debug] [Thread-3 (]: Began executing node test.olist_dbt.not_null_fact_order_item_order_item_id.9047846fc3
+[0m10:10:26.855490 [debug] [Thread-2 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_fact_order_item_order_id.06d73c8b39: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_fact_order_item_order_id.06d73c8b39"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from `DataEngineeringDB`.`fact_order_item`
+where order_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:26.857861 [debug] [Thread-3 (]: Writing runtime sql for node "test.olist_dbt.not_null_fact_order_item_order_item_id.9047846fc3"
+[0m10:10:26.860813 [debug] [Thread-3 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_fact_order_item_order_item_id.9047846fc3: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_fact_order_item_order_item_id.9047846fc3"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_item_id
+from `DataEngineeringDB`.`fact_order_item`
+where order_item_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:26.901526 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:26.902564 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:26.905192 [info ] [Thread-4 (]: 6 of 20 PASS not_null_fact_order_customer_id ................................... [[32mPASS[0m in 0.12s]
+[0m10:10:26.909519 [debug] [Thread-4 (]: Finished running node test.olist_dbt.not_null_fact_order_customer_id.e16387900a
+[0m10:10:26.910493 [debug] [Thread-4 (]: Began running node test.olist_dbt.not_null_fact_order_item_product_id.d9e8bae5ea
+[0m10:10:26.912988 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:26.908281 [info ] [Thread-1 (]: 5 of 20 PASS not_null_dim_seller_seller_id ..................................... [[32mPASS[0m in 0.12s]
+[0m10:10:26.914695 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:26.911485 [info ] [Thread-4 (]: 9 of 20 START test not_null_fact_order_item_product_id ......................... [RUN]
+[0m10:10:26.918128 [debug] [Thread-1 (]: Finished running node test.olist_dbt.not_null_dim_seller_seller_id.3da5c751a2
+[0m10:10:26.917055 [info ] [Thread-2 (]: 7 of 20 PASS not_null_fact_order_item_order_id ................................. [[32mPASS[0m in 0.12s]
+[0m10:10:26.920352 [info ] [Thread-3 (]: 8 of 20 PASS not_null_fact_order_item_order_item_id ............................ [[32mPASS[0m in 0.09s]
+[0m10:10:26.921084 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_fact_order_customer_id.e16387900a, now test.olist_dbt.not_null_fact_order_item_product_id.d9e8bae5ea)
+[0m10:10:26.921690 [debug] [Thread-1 (]: Began running node test.olist_dbt.not_null_fact_order_item_seller_id.22c32d1ed0
+[0m10:10:26.922558 [debug] [Thread-2 (]: Finished running node test.olist_dbt.not_null_fact_order_item_order_id.06d73c8b39
+[0m10:10:26.923338 [debug] [Thread-3 (]: Finished running node test.olist_dbt.not_null_fact_order_item_order_item_id.9047846fc3
+[0m10:10:26.923878 [debug] [Thread-4 (]: Began compiling node test.olist_dbt.not_null_fact_order_item_product_id.d9e8bae5ea
+[0m10:10:26.924582 [info ] [Thread-1 (]: 10 of 20 START test not_null_fact_order_item_seller_id ......................... [RUN]
+[0m10:10:26.925285 [debug] [Thread-2 (]: Began running node test.olist_dbt.not_null_fact_order_order_id.cc67e0bb93
+[0m10:10:26.925858 [debug] [Thread-3 (]: Began running node test.olist_dbt.not_null_fact_order_payment_order_id.c218573f69
+[0m10:10:26.935542 [debug] [Thread-4 (]: Writing injected SQL for node "test.olist_dbt.not_null_fact_order_item_product_id.d9e8bae5ea"
+[0m10:10:26.936292 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_dim_seller_seller_id.3da5c751a2, now test.olist_dbt.not_null_fact_order_item_seller_id.22c32d1ed0)
+[0m10:10:26.936890 [info ] [Thread-2 (]: 11 of 20 START test not_null_fact_order_order_id ............................... [RUN]
+[0m10:10:26.937557 [info ] [Thread-3 (]: 12 of 20 START test not_null_fact_order_payment_order_id ....................... [RUN]
+[0m10:10:26.938487 [debug] [Thread-1 (]: Began compiling node test.olist_dbt.not_null_fact_order_item_seller_id.22c32d1ed0
+[0m10:10:26.939151 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_fact_order_item_order_id.06d73c8b39, now test.olist_dbt.not_null_fact_order_order_id.cc67e0bb93)
+[0m10:10:26.939940 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_fact_order_item_order_item_id.9047846fc3, now test.olist_dbt.not_null_fact_order_payment_order_id.c218573f69)
+[0m10:10:26.949247 [debug] [Thread-1 (]: Writing injected SQL for node "test.olist_dbt.not_null_fact_order_item_seller_id.22c32d1ed0"
+[0m10:10:26.949820 [debug] [Thread-4 (]: Began executing node test.olist_dbt.not_null_fact_order_item_product_id.d9e8bae5ea
+[0m10:10:26.950396 [debug] [Thread-2 (]: Began compiling node test.olist_dbt.not_null_fact_order_order_id.cc67e0bb93
+[0m10:10:26.950934 [debug] [Thread-3 (]: Began compiling node test.olist_dbt.not_null_fact_order_payment_order_id.c218573f69
+[0m10:10:26.953400 [debug] [Thread-4 (]: Writing runtime sql for node "test.olist_dbt.not_null_fact_order_item_product_id.d9e8bae5ea"
+[0m10:10:26.962896 [debug] [Thread-2 (]: Writing injected SQL for node "test.olist_dbt.not_null_fact_order_order_id.cc67e0bb93"
+[0m10:10:26.971253 [debug] [Thread-3 (]: Writing injected SQL for node "test.olist_dbt.not_null_fact_order_payment_order_id.c218573f69"
+[0m10:10:26.972445 [debug] [Thread-1 (]: Began executing node test.olist_dbt.not_null_fact_order_item_seller_id.22c32d1ed0
+[0m10:10:26.974759 [debug] [Thread-1 (]: Writing runtime sql for node "test.olist_dbt.not_null_fact_order_item_seller_id.22c32d1ed0"
+[0m10:10:26.975984 [debug] [Thread-2 (]: Began executing node test.olist_dbt.not_null_fact_order_order_id.cc67e0bb93
+[0m10:10:26.979133 [debug] [Thread-2 (]: Writing runtime sql for node "test.olist_dbt.not_null_fact_order_order_id.cc67e0bb93"
+[0m10:10:26.980046 [debug] [Thread-3 (]: Began executing node test.olist_dbt.not_null_fact_order_payment_order_id.c218573f69
+[0m10:10:26.980913 [debug] [Thread-4 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_fact_order_item_product_id.d9e8bae5ea: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_fact_order_item_product_id.d9e8bae5ea"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_id
+from `DataEngineeringDB`.`fact_order_item`
+where product_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:26.983790 [debug] [Thread-3 (]: Writing runtime sql for node "test.olist_dbt.not_null_fact_order_payment_order_id.c218573f69"
+[0m10:10:26.985677 [debug] [Thread-1 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_fact_order_item_seller_id.22c32d1ed0: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_fact_order_item_seller_id.22c32d1ed0"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select seller_id
+from `DataEngineeringDB`.`fact_order_item`
+where seller_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:26.987089 [debug] [Thread-2 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_fact_order_order_id.cc67e0bb93: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_fact_order_order_id.cc67e0bb93"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from `DataEngineeringDB`.`fact_order`
+where order_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:26.990776 [debug] [Thread-3 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_fact_order_payment_order_id.c218573f69: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_fact_order_payment_order_id.c218573f69"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from `DataEngineeringDB`.`fact_order_payment`
+where order_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:27.037455 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:27.038600 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:27.039960 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:27.044759 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:27.043330 [info ] [Thread-2 (]: 11 of 20 PASS not_null_fact_order_order_id ..................................... [[32mPASS[0m in 0.10s]
+[0m10:10:27.047944 [info ] [Thread-1 (]: 10 of 20 PASS not_null_fact_order_item_seller_id ............................... [[32mPASS[0m in 0.11s]
+[0m10:10:27.050368 [info ] [Thread-4 (]: 9 of 20 PASS not_null_fact_order_item_product_id ............................... [[32mPASS[0m in 0.13s]
+[0m10:10:27.054848 [debug] [Thread-2 (]: Finished running node test.olist_dbt.not_null_fact_order_order_id.cc67e0bb93
+[0m10:10:27.053850 [info ] [Thread-3 (]: 12 of 20 PASS not_null_fact_order_payment_order_id ............................. [[32mPASS[0m in 0.11s]
+[0m10:10:27.056002 [debug] [Thread-1 (]: Finished running node test.olist_dbt.not_null_fact_order_item_seller_id.22c32d1ed0
+[0m10:10:27.057164 [debug] [Thread-4 (]: Finished running node test.olist_dbt.not_null_fact_order_item_product_id.d9e8bae5ea
+[0m10:10:27.057894 [debug] [Thread-2 (]: Began running node test.olist_dbt.not_null_fact_order_payment_payment_value.c8b201bad1
+[0m10:10:27.058926 [debug] [Thread-3 (]: Finished running node test.olist_dbt.not_null_fact_order_payment_order_id.c218573f69
+[0m10:10:27.059672 [debug] [Thread-1 (]: Began running node test.olist_dbt.not_null_fact_order_review_order_id.d336d8d498
+[0m10:10:27.060724 [debug] [Thread-4 (]: Began running node test.olist_dbt.not_null_fact_order_review_review_id.6c107a505e
+[0m10:10:27.061705 [info ] [Thread-2 (]: 13 of 20 START test not_null_fact_order_payment_payment_value .................. [RUN]
+[0m10:10:27.062740 [debug] [Thread-3 (]: Began running node test.olist_dbt.not_null_fact_order_review_review_score.ed9da753c2
+[0m10:10:27.063544 [info ] [Thread-1 (]: 14 of 20 START test not_null_fact_order_review_order_id ........................ [RUN]
+[0m10:10:27.064326 [info ] [Thread-4 (]: 15 of 20 START test not_null_fact_order_review_review_id ....................... [RUN]
+[0m10:10:27.065340 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_fact_order_order_id.cc67e0bb93, now test.olist_dbt.not_null_fact_order_payment_payment_value.c8b201bad1)
+[0m10:10:27.066253 [info ] [Thread-3 (]: 16 of 20 START test not_null_fact_order_review_review_score .................... [RUN]
+[0m10:10:27.067325 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_fact_order_item_seller_id.22c32d1ed0, now test.olist_dbt.not_null_fact_order_review_order_id.d336d8d498)
+[0m10:10:27.068005 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_fact_order_item_product_id.d9e8bae5ea, now test.olist_dbt.not_null_fact_order_review_review_id.6c107a505e)
+[0m10:10:27.068630 [debug] [Thread-2 (]: Began compiling node test.olist_dbt.not_null_fact_order_payment_payment_value.c8b201bad1
+[0m10:10:27.069294 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_fact_order_payment_order_id.c218573f69, now test.olist_dbt.not_null_fact_order_review_review_score.ed9da753c2)
+[0m10:10:27.069951 [debug] [Thread-1 (]: Began compiling node test.olist_dbt.not_null_fact_order_review_order_id.d336d8d498
+[0m10:10:27.070634 [debug] [Thread-4 (]: Began compiling node test.olist_dbt.not_null_fact_order_review_review_id.6c107a505e
+[0m10:10:27.083361 [debug] [Thread-2 (]: Writing injected SQL for node "test.olist_dbt.not_null_fact_order_payment_payment_value.c8b201bad1"
+[0m10:10:27.083993 [debug] [Thread-3 (]: Began compiling node test.olist_dbt.not_null_fact_order_review_review_score.ed9da753c2
+[0m10:10:27.093895 [debug] [Thread-1 (]: Writing injected SQL for node "test.olist_dbt.not_null_fact_order_review_order_id.d336d8d498"
+[0m10:10:27.104384 [debug] [Thread-4 (]: Writing injected SQL for node "test.olist_dbt.not_null_fact_order_review_review_id.6c107a505e"
+[0m10:10:27.116195 [debug] [Thread-3 (]: Writing injected SQL for node "test.olist_dbt.not_null_fact_order_review_review_score.ed9da753c2"
+[0m10:10:27.117814 [debug] [Thread-2 (]: Began executing node test.olist_dbt.not_null_fact_order_payment_payment_value.c8b201bad1
+[0m10:10:27.120557 [debug] [Thread-2 (]: Writing runtime sql for node "test.olist_dbt.not_null_fact_order_payment_payment_value.c8b201bad1"
+[0m10:10:27.121789 [debug] [Thread-1 (]: Began executing node test.olist_dbt.not_null_fact_order_review_order_id.d336d8d498
+[0m10:10:27.122551 [debug] [Thread-4 (]: Began executing node test.olist_dbt.not_null_fact_order_review_review_id.6c107a505e
+[0m10:10:27.125783 [debug] [Thread-3 (]: Began executing node test.olist_dbt.not_null_fact_order_review_review_score.ed9da753c2
+[0m10:10:27.125216 [debug] [Thread-1 (]: Writing runtime sql for node "test.olist_dbt.not_null_fact_order_review_order_id.d336d8d498"
+[0m10:10:27.130022 [debug] [Thread-4 (]: Writing runtime sql for node "test.olist_dbt.not_null_fact_order_review_review_id.6c107a505e"
+[0m10:10:27.133642 [debug] [Thread-3 (]: Writing runtime sql for node "test.olist_dbt.not_null_fact_order_review_review_score.ed9da753c2"
+[0m10:10:27.134521 [debug] [Thread-2 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_fact_order_payment_payment_value.c8b201bad1: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_fact_order_payment_payment_value.c8b201bad1"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select payment_value
+from `DataEngineeringDB`.`fact_order_payment`
+where payment_value is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:27.137980 [debug] [Thread-4 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_fact_order_review_review_id.6c107a505e: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_fact_order_review_review_id.6c107a505e"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select review_id
+from `DataEngineeringDB`.`fact_order_review`
+where review_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:27.139051 [debug] [Thread-3 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_fact_order_review_review_score.ed9da753c2: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_fact_order_review_review_score.ed9da753c2"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select review_score
+from `DataEngineeringDB`.`fact_order_review`
+where review_score is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:27.139771 [debug] [Thread-1 (]: dbt_clickhouse adapter: On test.olist_dbt.not_null_fact_order_review_order_id.d336d8d498: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.not_null_fact_order_review_order_id.d336d8d498"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from `DataEngineeringDB`.`fact_order_review`
+where order_id is null
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:27.185389 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:27.190012 [info ] [Thread-2 (]: 13 of 20 PASS not_null_fact_order_payment_payment_value ........................ [[32mPASS[0m in 0.12s]
+[0m10:10:27.192488 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:27.194538 [debug] [Thread-2 (]: Finished running node test.olist_dbt.not_null_fact_order_payment_payment_value.c8b201bad1
+[0m10:10:27.196208 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.05 seconds
+[0m10:10:27.199436 [info ] [Thread-4 (]: 15 of 20 PASS not_null_fact_order_review_review_id ............................. [[32mPASS[0m in 0.13s]
+[0m10:10:27.200828 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:27.201706 [debug] [Thread-2 (]: Began running node test.olist_dbt.unique_dim_customer_customer_id.b42affccd1
+[0m10:10:27.204780 [info ] [Thread-3 (]: 16 of 20 PASS not_null_fact_order_review_review_score .......................... [[32mPASS[0m in 0.14s]
+[0m10:10:27.206131 [debug] [Thread-4 (]: Finished running node test.olist_dbt.not_null_fact_order_review_review_id.6c107a505e
+[0m10:10:27.209594 [info ] [Thread-1 (]: 14 of 20 PASS not_null_fact_order_review_order_id .............................. [[32mPASS[0m in 0.14s]
+[0m10:10:27.210831 [info ] [Thread-2 (]: 17 of 20 START test unique_dim_customer_customer_id ............................ [RUN]
+[0m10:10:27.212784 [debug] [Thread-3 (]: Finished running node test.olist_dbt.not_null_fact_order_review_review_score.ed9da753c2
+[0m10:10:27.213727 [debug] [Thread-4 (]: Began running node test.olist_dbt.unique_dim_product_product_id.46495bf7fe
+[0m10:10:27.215014 [debug] [Thread-1 (]: Finished running node test.olist_dbt.not_null_fact_order_review_order_id.d336d8d498
+[0m10:10:27.215891 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_fact_order_payment_payment_value.c8b201bad1, now test.olist_dbt.unique_dim_customer_customer_id.b42affccd1)
+[0m10:10:27.216756 [debug] [Thread-3 (]: Began running node test.olist_dbt.unique_dim_seller_seller_id.a1add5f830
+[0m10:10:27.217623 [info ] [Thread-4 (]: 18 of 20 START test unique_dim_product_product_id .............................. [RUN]
+[0m10:10:27.218618 [debug] [Thread-1 (]: Began running node test.olist_dbt.unique_fact_order_order_id.1ffa56411b
+[0m10:10:27.219721 [debug] [Thread-2 (]: Began compiling node test.olist_dbt.unique_dim_customer_customer_id.b42affccd1
+[0m10:10:27.220511 [info ] [Thread-3 (]: 19 of 20 START test unique_dim_seller_seller_id ................................ [RUN]
+[0m10:10:27.221509 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_fact_order_review_review_id.6c107a505e, now test.olist_dbt.unique_dim_product_product_id.46495bf7fe)
+[0m10:10:27.222481 [info ] [Thread-1 (]: 20 of 20 START test unique_fact_order_order_id ................................. [RUN]
+[0m10:10:27.239841 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_fact_order_review_review_score.ed9da753c2, now test.olist_dbt.unique_dim_seller_seller_id.a1add5f830)
+[0m10:10:27.243146 [debug] [Thread-2 (]: Writing injected SQL for node "test.olist_dbt.unique_dim_customer_customer_id.b42affccd1"
+[0m10:10:27.244313 [debug] [Thread-4 (]: Began compiling node test.olist_dbt.unique_dim_product_product_id.46495bf7fe
+[0m10:10:27.245361 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.olist_dbt.not_null_fact_order_review_order_id.d336d8d498, now test.olist_dbt.unique_fact_order_order_id.1ffa56411b)
+[0m10:10:27.246295 [debug] [Thread-3 (]: Began compiling node test.olist_dbt.unique_dim_seller_seller_id.a1add5f830
+[0m10:10:27.260725 [debug] [Thread-4 (]: Writing injected SQL for node "test.olist_dbt.unique_dim_product_product_id.46495bf7fe"
+[0m10:10:27.261753 [debug] [Thread-1 (]: Began compiling node test.olist_dbt.unique_fact_order_order_id.1ffa56411b
+[0m10:10:27.275787 [debug] [Thread-3 (]: Writing injected SQL for node "test.olist_dbt.unique_dim_seller_seller_id.a1add5f830"
+[0m10:10:27.277307 [debug] [Thread-2 (]: Began executing node test.olist_dbt.unique_dim_customer_customer_id.b42affccd1
+[0m10:10:27.290217 [debug] [Thread-1 (]: Writing injected SQL for node "test.olist_dbt.unique_fact_order_order_id.1ffa56411b"
+[0m10:10:27.293293 [debug] [Thread-2 (]: Writing runtime sql for node "test.olist_dbt.unique_dim_customer_customer_id.b42affccd1"
+[0m10:10:27.294980 [debug] [Thread-4 (]: Began executing node test.olist_dbt.unique_dim_product_product_id.46495bf7fe
+[0m10:10:27.297519 [debug] [Thread-4 (]: Writing runtime sql for node "test.olist_dbt.unique_dim_product_product_id.46495bf7fe"
+[0m10:10:27.298162 [debug] [Thread-3 (]: Began executing node test.olist_dbt.unique_dim_seller_seller_id.a1add5f830
+[0m10:10:27.299168 [debug] [Thread-1 (]: Began executing node test.olist_dbt.unique_fact_order_order_id.1ffa56411b
+[0m10:10:27.301904 [debug] [Thread-3 (]: Writing runtime sql for node "test.olist_dbt.unique_dim_seller_seller_id.a1add5f830"
+[0m10:10:27.304670 [debug] [Thread-1 (]: Writing runtime sql for node "test.olist_dbt.unique_fact_order_order_id.1ffa56411b"
+[0m10:10:27.305578 [debug] [Thread-2 (]: dbt_clickhouse adapter: On test.olist_dbt.unique_dim_customer_customer_id.b42affccd1: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.unique_dim_customer_customer_id.b42affccd1"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from `DataEngineeringDB`.`dim_customer`
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:27.306731 [debug] [Thread-4 (]: dbt_clickhouse adapter: On test.olist_dbt.unique_dim_product_product_id.46495bf7fe: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.unique_dim_product_product_id.46495bf7fe"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    product_id as unique_field,
+    count(*) as n_records
+
+from `DataEngineeringDB`.`dim_product`
+where product_id is not null
+group by product_id
+having count(*) > 1
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:27.310194 [debug] [Thread-1 (]: dbt_clickhouse adapter: On test.olist_dbt.unique_fact_order_order_id.1ffa56411b: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.unique_fact_order_order_id.1ffa56411b"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from `DataEngineeringDB`.`fact_order`
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:27.312674 [debug] [Thread-3 (]: dbt_clickhouse adapter: On test.olist_dbt.unique_dim_seller_seller_id.a1add5f830: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "olist_dbt", "target_name": "dev", "node_id": "test.olist_dbt.unique_dim_seller_seller_id.a1add5f830"} */
+
+    
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    seller_id as unique_field,
+    count(*) as n_records
+
+from `DataEngineeringDB`.`dim_seller`
+where seller_id is not null
+group by seller_id
+having count(*) > 1
+
+
+
+  
+  
+    ) dbt_internal_test...
+[0m10:10:27.372099 [debug] [Thread-3 (]: dbt_clickhouse adapter: SQL status: OK in 0.06 seconds
+[0m10:10:27.377196 [debug] [Thread-4 (]: dbt_clickhouse adapter: SQL status: OK in 0.07 seconds
+[0m10:10:27.375632 [info ] [Thread-3 (]: 19 of 20 PASS unique_dim_seller_seller_id ...................................... [[32mPASS[0m in 0.14s]
+[0m10:10:27.381066 [info ] [Thread-4 (]: 18 of 20 PASS unique_dim_product_product_id .................................... [[32mPASS[0m in 0.16s]
+[0m10:10:27.382835 [debug] [Thread-3 (]: Finished running node test.olist_dbt.unique_dim_seller_seller_id.a1add5f830
+[0m10:10:27.383976 [debug] [Thread-4 (]: Finished running node test.olist_dbt.unique_dim_product_product_id.46495bf7fe
+[0m10:10:27.399680 [debug] [Thread-2 (]: dbt_clickhouse adapter: SQL status: OK in 0.09 seconds
+[0m10:10:27.403334 [debug] [Thread-1 (]: dbt_clickhouse adapter: SQL status: OK in 0.09 seconds
+[0m10:10:27.402259 [info ] [Thread-2 (]: 17 of 20 PASS unique_dim_customer_customer_id .................................. [[32mPASS[0m in 0.19s]
+[0m10:10:27.405859 [info ] [Thread-1 (]: 20 of 20 PASS unique_fact_order_order_id ....................................... [[32mPASS[0m in 0.16s]
+[0m10:10:27.406924 [debug] [Thread-2 (]: Finished running node test.olist_dbt.unique_dim_customer_customer_id.b42affccd1
+[0m10:10:27.407738 [debug] [Thread-1 (]: Finished running node test.olist_dbt.unique_fact_order_order_id.1ffa56411b
+[0m10:10:27.410571 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:10:27.411112 [debug] [MainThread]: Connection 'list__DataEngineeringDB' was left open.
+[0m10:10:27.412077 [debug] [MainThread]: On list__DataEngineeringDB: Close
+[0m10:10:27.412673 [debug] [MainThread]: Connection 'test.olist_dbt.unique_dim_seller_seller_id.a1add5f830' was left open.
+[0m10:10:27.413177 [debug] [MainThread]: On test.olist_dbt.unique_dim_seller_seller_id.a1add5f830: Close
+[0m10:10:27.413688 [debug] [MainThread]: Connection 'test.olist_dbt.unique_dim_customer_customer_id.b42affccd1' was left open.
+[0m10:10:27.414151 [debug] [MainThread]: On test.olist_dbt.unique_dim_customer_customer_id.b42affccd1: Close
+[0m10:10:27.414725 [debug] [MainThread]: Connection 'test.olist_dbt.unique_dim_product_product_id.46495bf7fe' was left open.
+[0m10:10:27.415177 [debug] [MainThread]: On test.olist_dbt.unique_dim_product_product_id.46495bf7fe: Close
+[0m10:10:27.415620 [debug] [MainThread]: Connection 'test.olist_dbt.unique_fact_order_order_id.1ffa56411b' was left open.
+[0m10:10:27.416052 [debug] [MainThread]: On test.olist_dbt.unique_fact_order_order_id.1ffa56411b: Close
+[0m10:10:27.417148 [info ] [MainThread]: 
+[0m10:10:27.417712 [info ] [MainThread]: Finished running 20 data tests in 0 hours 0 minutes and 2.16 seconds (2.16s).
+[0m10:10:27.423231 [debug] [MainThread]: Command end result
+[0m10:10:27.491538 [debug] [MainThread]: Wrote artifact WritableManifest to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\manifest.json
+[0m10:10:27.498180 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\semantic_manifest.json
+[0m10:10:27.504037 [debug] [MainThread]: Wrote artifact OsiDocument to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\osi_document.json
+[0m10:10:27.519064 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\FinalProjectDataEngineering\dbt\olist_dbt\target\run_results.json
+[0m10:10:27.519618 [info ] [MainThread]: 
+[0m10:10:27.520273 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:10:27.520836 [info ] [MainThread]: 
+[0m10:10:27.521396 [info ] [MainThread]: Done. PASS=20 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=20
+[0m10:10:27.522827 [debug] [MainThread]: Command `dbt test` succeeded at 10:10:27.522653 after 4.13 seconds
+[0m10:10:27.523427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8D368950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8E2EEA40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024E8E2EF280>]}
+[0m10:10:27.524177 [debug] [MainThread]: Flushing usage events
+[0m10:10:29.267264 [debug] [MainThread]: An error was encountered while trying to flush usage events

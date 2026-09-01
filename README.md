@@ -11,3 +11,5 @@
 10. Install Prefect
 11. Membuat coding coding olist_flow.py(extract_olist.py, load_olist, olist_dbt)
 12. Run olist_flow.py (EXTRACT, LOAD TO CLICKHOUSE, DBT RUN, DBT TEST)
+13. Tambah DBT_EXE pada Configuration
+14. Modify result pada dbt_run dan dbt_test
