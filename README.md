@@ -13,3 +13,4 @@
 12. Run olist_flow.py (EXTRACT, LOAD TO CLICKHOUSE, DBT RUN, DBT TEST)
 13. Tambah DBT_EXE pada Configuration
 14. Modify result pada dbt_run dan dbt_test
+15. Memperbaiki coding load_olist.py (upsert tabel master/dim, chunksize untuk file besamemory pressure, transaksi/fact, transaksi refresh berdasarkan start_date dan end_date, )

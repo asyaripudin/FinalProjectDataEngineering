@@ -2,6 +2,8 @@ from prefect import flow, task
 import subprocess
 import sys
 from pathlib import Path
+from prefect.schedules import Cron
+
 
 # ============================================================
 # PROJECT CONFIGURATION
