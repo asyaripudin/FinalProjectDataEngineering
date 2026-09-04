@@ -1,0 +1,132 @@
+version: 2
+
+sources:
+  - name: staging
+    description: "Data mentah Olist yang sudah di-load ke ClickHouse"
+    schema: "{{ env_var('DBT_SCHEMA') }}"
+    tables:
+      - name: stg_dim_customer
+        description: "Data pelanggan Olist"
+
+      - name: stg_dim_geolocation
+        description: "Data geolocation Olist"
+
+      - name: stg_dim_products
+        description: "Data produk Olist"
+
+      - name: stg_dim_product_category_translation
+        description: "Terjemahan kategori produk (Portugis -> Inggris)"
+
+      - name: stg_dim_sellers
+        description: "Data penjual Olist"
+
+      - name: stg_fact_orders
+        description: "Data pesanan/transaksi utama"
+
+      - name: stg_fact_order_items
+        description: "Item detail dalam setiap pesanan"
+
+      - name: stg_fact_order_payments
+        description: "Metode pembayaran per pesanan"
+
+      - name: stg_fact_order_reviews
+        description: "Ulasan/review per pesanan"
+
+models:
+
+  - name: dim_customer
+    description: "Silver model untuk data pelanggan. Membersihkan dan menstandarisasi kolom."
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_unique_id
+        data_tests:
+          - not_null
+
+
+  - name: dim_product
+    description: "Silver model untuk produk"
+    columns:
+      - name: product_id
+        description: "Unique product identifier"
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_seller
+    description: "Silver model untuk penjual"
+    columns:
+      - name: seller_id
+        description: "Unique seller identifier"
+        data_tests:
+          - not_null
+          - unique
+
+  - name: dim_geolocation
+    description: "Silver model untuk geolocation"
+    columns:
+      - name: geolocation_zip_code_prefix
+        data_tests:
+          - not_null
+
+  - name: fact_order
+    description: "Silver model untuk data pesanan"
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        data_tests:
+          - not_null
+
+  - name: fact_order_item
+    description: "Silver model untuk item pesanan"
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+
+      - name: order_item_id
+        data_tests:
+          - not_null
+
+      - name: product_id
+        data_tests:
+          - not_null
+
+      - name: seller_id
+        data_tests:
+          - not_null
+
+  - name: fact_order_payment
+    description: "Silver model untuk pembayaran pesanan"
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+
+      - name: payment_value
+        data_tests:
+          - not_null
+
+  - name: fact_order_review
+    description: "Silver model untuk ulasan pesanan"
+    columns:
+      - name: review_id
+        data_tests:
+          - not_null
+
+      - name: order_id
+        data_tests:
+          - not_null
+
+      - name: review_score
+        data_tests:
+          - not_null
+

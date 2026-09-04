@@ -31,14 +31,14 @@ CREATE DATABASE IF NOT EXISTS DataEngineeringDB
 # 1. DIM CUSTOMER
 # ============================================================
 
-print("Creating dim_customer...")
+print("Creating bronze_dim_customer...")
 
 execute("""
-DROP TABLE IF EXISTS dim_customer
+DROP TABLE IF EXISTS bronze_dim_customer
 """)
 
 execute("""
-CREATE TABLE dim_customer
+CREATE TABLE bronze_dim_customer
 ENGINE = MergeTree
 ORDER BY customer_id
 AS
@@ -55,14 +55,14 @@ FROM stg_customers
 # 2. DIM PRODUCT
 # ============================================================
 
-print("Creating dim_product...")
+print("Creating bronze_dim_product...")
 
 execute("""
-DROP TABLE IF EXISTS dim_product
+DROP TABLE IF EXISTS bronze_dim_product
 """)
 
 execute("""
-CREATE TABLE dim_product
+CREATE TABLE bronze_dim_product
 ENGINE = MergeTree
 ORDER BY product_id
 AS
@@ -86,14 +86,14 @@ LEFT JOIN stg_product_category_translation t
 # 3. DIM SELLER
 # ============================================================
 
-print("Creating dim_seller...")
+print("Creating bronze_dim_seller...")
 
 execute("""
-DROP TABLE IF EXISTS dim_seller
+DROP TABLE IF EXISTS bronze_dim_seller
 """)
 
 execute("""
-CREATE TABLE dim_seller
+CREATE TABLE bronze_dim_seller
 ENGINE = MergeTree
 ORDER BY seller_id
 AS
@@ -109,14 +109,14 @@ FROM stg_sellers
 # 4. DIM GEOLOCATION
 # ============================================================
 
-print("Creating dim_geolocation...")
+print("Creating bronze_dim_geolocation...")
 
 execute("""
-DROP TABLE IF EXISTS dim_geolocation
+DROP TABLE IF EXISTS bronze_dim_geolocation
 """)
 
 execute("""
-CREATE TABLE dim_geolocation
+CREATE TABLE bronze_dim_geolocation
 ENGINE = MergeTree
 ORDER BY geolocation_zip_code_prefix
 AS
@@ -133,14 +133,14 @@ FROM stg_geolocation
 # 5. FACT ORDER
 # ============================================================
 
-print("Creating fact_order...")
+print("Creating bronze_fact_order...")
 
 execute("""
-DROP TABLE IF EXISTS fact_order
+DROP TABLE IF EXISTS bronze_fact_order
 """)
 
 execute("""
-CREATE TABLE fact_order
+CREATE TABLE bronze_fact_order
 ENGINE = MergeTree
 ORDER BY order_id
 AS
@@ -171,14 +171,14 @@ FROM stg_orders
 # 6. FACT ORDER ITEM
 # ============================================================
 
-print("Creating fact_order_item...")
+print("Creating bronze_fact_order_item...")
 
 execute("""
-DROP TABLE IF EXISTS fact_order_item
+DROP TABLE IF EXISTS bronze_fact_order_item
 """)
 
 execute("""
-CREATE TABLE fact_order_item
+CREATE TABLE bronze_fact_order_item
 ENGINE = MergeTree
 ORDER BY (order_id, order_item_id)
 AS
@@ -201,14 +201,14 @@ FROM stg_order_items
 # 7. FACT ORDER PAYMENT
 # ============================================================
 
-print("Creating fact_order_payment...")
+print("Creating bronze_fact_order_payment...")
 
 execute("""
-DROP TABLE IF EXISTS fact_order_payment
+DROP TABLE IF EXISTS bronze_fact_order_payment
 """)
 
 execute("""
-CREATE TABLE fact_order_payment
+CREATE TABLE bronze_fact_order_payment
 ENGINE = MergeTree
 ORDER BY (order_id, payment_sequential)
 AS
@@ -225,14 +225,14 @@ FROM stg_order_payments
 # 8. FACT ORDER REVIEW
 # ============================================================
 
-print("Creating fact_order_review...")
+print("Creating bronze_fact_order_review...")
 
 execute("""
-DROP TABLE IF EXISTS fact_order_review
+DROP TABLE IF EXISTS bronze_fact_order_review
 """)
 
 execute("""
-CREATE TABLE fact_order_review
+CREATE TABLE bronze_fact_order_review
 ENGINE = MergeTree
 ORDER BY (order_id, review_id)
 AS
@@ -262,14 +262,14 @@ print("TRANSFORM COMPLETED")
 print("=" * 70)
 
 tables = [
-    "dim_customer",
-    "dim_product",
-    "dim_seller",
-    "dim_geolocation",
-    "fact_order",
-    "fact_order_item",
-    "fact_order_payment",
-    "fact_order_review"
+    "bronze_dim_customer",
+    "bronze_dim_product",
+    "bronze_dim_seller",
+    "bronze_dim_geolocation",
+    "bronze_fact_order",
+    "bronze_fact_order_item",
+    "bronze_fact_order_payment",
+    "bronze_fact_order_review"
 ]
 
 for table in tables:

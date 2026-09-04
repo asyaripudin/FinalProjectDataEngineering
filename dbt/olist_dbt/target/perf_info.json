@@ -1,0 +1,45 @@
+{
+    "path_count": 144,
+    "parsed_path_count": 2,
+    "static_analysis_path_count": 1,
+    "static_analysis_parsed_path_count": 0,
+    "is_partial_parse_enabled": true,
+    "is_static_analysis_enabled": true,
+    "read_files_elapsed": 0.07056510000256822,
+    "load_macros_elapsed": 0.0006759999669156969,
+    "parse_project_elapsed": 1.2342185999732465,
+    "patch_sources_elapsed": 3.940000897273421e-05,
+    "process_manifest_elapsed": 0.0022918000468052924,
+    "load_all_elapsed": 1.7101736000040546,
+    "projects": [
+        {
+            "project_name": "final_project_data_engineering",
+            "elapsed": 1.2340217999881133,
+            "parsers": [
+                {
+                    "parser": "model",
+                    "elapsed": 0.47682770004030317,
+                    "parsed_path_count": 1
+                },
+                {
+                    "parser": "test",
+                    "elapsed": 0.7571740000275895,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 2
+        },
+        {
+            "project_name": "dbt_clickhouse",
+            "elapsed": 0,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt",
+            "elapsed": 0,
+            "parsers": [],
+            "parsed_path_count": 0
+        }
+    ]
+}

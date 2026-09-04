@@ -1,0 +1,194 @@
+
+import clickhouse_connect
+
+# ============================================================
+# Koneksi ke ClickHouse Final Project
+# ============================================================
+
+client = clickhouse_connect.get_client(
+    host="localhost",
+    port=8124,
+    username="admin",
+    password="ClickHouse@2026",
+    database="DataEngineeringDB"
+)
+
+# ============================================================
+# Daftar tabel staging
+# ============================================================
+
+tables = {
+
+    # --------------------------------------------------------
+    # 1. Customers
+    # --------------------------------------------------------
+    
+    "stg_dim_customer": """
+    CREATE TABLE IF NOT EXISTS stg_dim_customer
+    (
+        customer_id String,
+        customer_unique_id String,
+        customer_zip_code_prefix UInt32,
+        customer_city String,
+        customer_state String
+    )
+    ENGINE = MergeTree
+    ORDER BY customer_id
+""",
+    
+    # --------------------------------------------------------
+    # 2. Geolocation
+    # --------------------------------------------------------
+    "stg_dim_geolocation": """
+        CREATE TABLE IF NOT EXISTS stg_dim_geolocation
+        (
+            geolocation_zip_code_prefix UInt32,
+            geolocation_lat Float64,
+            geolocation_lng Float64,
+            geolocation_city String,
+            geolocation_state String
+        )
+        ENGINE = MergeTree
+        ORDER BY geolocation_zip_code_prefix
+    """,
+
+    # --------------------------------------------------------
+    # 3. Order Items
+    # --------------------------------------------------------
+    "stg_fact_order_items": """
+        CREATE TABLE IF NOT EXISTS stg_fact_order_items
+        (
+            order_id String,
+            order_item_id UInt32,
+            product_id String,
+            seller_id String,
+            shipping_limit_date String,
+            price Float64,
+            freight_value Float64
+        )
+        ENGINE = MergeTree
+        ORDER BY (order_id, order_item_id)
+    """,
+
+    # --------------------------------------------------------
+    # 4. Order Payments
+    # --------------------------------------------------------
+    "stg_fact_order_payments": """
+        CREATE TABLE IF NOT EXISTS stg_fact_order_payments
+        (
+            order_id String,
+            payment_sequential UInt32,
+            payment_type String,
+            payment_installments UInt32,
+            payment_value Float64
+        )
+        ENGINE = MergeTree
+        ORDER BY (order_id, payment_sequential)
+    """,
+
+    # --------------------------------------------------------
+    # 5. Order Reviews
+    # --------------------------------------------------------
+    "stg_fact_order_reviews": """
+        CREATE TABLE IF NOT EXISTS stg_fact_order_reviews
+        (
+            review_id String,
+            order_id String,
+            review_score UInt8,
+            review_comment_title Nullable(String), 
+            review_comment_message Nullable(String),
+            review_creation_date Nullable(String), 
+            review_answer_timestamp Nullable(String)  
+        )
+        ENGINE = MergeTree
+        ORDER BY review_id
+    """,
+
+    # --------------------------------------------------------
+    # 6. Orders
+    # --------------------------------------------------------
+    "stg_fact_orders": """
+        CREATE TABLE IF NOT EXISTS stg_fact_orders
+        (
+            order_id String,
+            customer_id String,
+            order_status String,
+            order_purchase_timestamp String,
+            order_approved_at Nullable(String),
+            order_delivered_carrier_date Nullable(String),
+            order_delivered_customer_date Nullable(String),
+            order_estimated_delivery_date String           
+        )
+        ENGINE = MergeTree
+        ORDER BY order_id
+    """,
+
+    # --------------------------------------------------------
+    # 7. Products
+    # --------------------------------------------------------
+    "stg_dim_products": """
+        CREATE TABLE IF NOT EXISTS stg_dim_products
+        (
+            product_id String,
+            product_category_name Nullable(String),
+            product_name_lenght Nullable(Float64),
+            product_description_lenght Nullable(Float64),
+            product_photos_qty Nullable(Float64),
+            product_weight_g Nullable(Float64),
+            product_length_cm Nullable(Float64),
+            product_height_cm Nullable(Float64),
+            product_width_cm Nullable(Float64)
+        )
+        ENGINE = MergeTree
+        ORDER BY product_id
+    """,
+
+    # --------------------------------------------------------
+    # 8. Sellers
+    # --------------------------------------------------------
+    "stg_dim_sellers": """
+        CREATE TABLE IF NOT EXISTS stg_dim_sellers
+        (
+            seller_id String,
+            seller_zip_code_prefix UInt32,
+            seller_city String,
+            seller_state String
+        )
+        ENGINE = MergeTree
+        ORDER BY seller_id
+    """,
+
+    # --------------------------------------------------------
+    # 9. Product Category Translation
+    # --------------------------------------------------------
+    "stg_dim_product_category_translation": """
+        CREATE TABLE IF NOT EXISTS stg_dim_product_category_translation
+        (
+            product_category_name String,
+            product_category_name_english String
+        )
+        ENGINE = MergeTree
+        ORDER BY product_category_name
+    """
+}
+
+# ============================================================
+# Membuat tabel
+# ============================================================
+
+print("Connecting to ClickHouse...")
+
+for table_name, create_sql in tables.items():
+
+    client.command(create_sql)
+
+    print(f"Created table: {table_name}")
+
+
+# ============================================================
+# Selesai
+# ============================================================
+
+print()
+print("All staging tables have been created successfully.")
+print("Database: DataEngineeringDB")

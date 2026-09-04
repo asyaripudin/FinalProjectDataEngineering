@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: customer_performance
+    description: "Gold customer performance mart yang berisi informasi customer dan metrik performa berdasarkan data order, payment, dan review."
+  
+  - name: product_performance
+    description: "Gold product performance mart yang berisi informasi produk dan metrik performa penjualan, seperti jumlah unit terjual, total revenue, total freight, dan rata-rata harga jual produk."
+    
+  - name: seller_performance
+    description: "Gold seller performance mart yang berisi informasi penjual dan metrik performa. Siap digunakan untuk evaluasi seller."
+   
+  - name: order_performance
+    description: "Gold order performance mart yang berisi informasi setiap order dan metrik performa berdasarkan data order, payment, dan review, termasuk status pesanan, waktu pengiriman, dan nilai transaksi."
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+

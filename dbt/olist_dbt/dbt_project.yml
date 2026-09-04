@@ -1,14 +1,19 @@
-name: 'olist_dbt'
+name: 'final_project_data_engineering'
 version: '1.0.0'
 config-version: 2
 
-profile: 'olist_dbt'
+profile: 'final_project_data_engineering'
 
 model-paths: ["models"]
 test-paths: ["tests"]
 macro-paths: ["macros"]
 
 models:
-  olist_dbt:
+  final_project_data_engineering:
     +materialized: table
+    +schema: DataEngineeringDB
+    
+    
 
+    
+    

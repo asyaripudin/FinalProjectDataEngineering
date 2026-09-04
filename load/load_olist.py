@@ -38,15 +38,15 @@ client = clickhouse_connect.get_client(
 # ============================================================
 
 datasets = {
-    "olist_customers_dataset.csv": "stg_customers",
-    "olist_geolocation_dataset.csv": "stg_geolocation",
-    "olist_order_items_dataset.csv": "stg_order_items",
-    "olist_order_payments_dataset.csv": "stg_order_payments",
-    "olist_order_reviews_dataset.csv": "stg_order_reviews",
-    "olist_orders_dataset.csv": "stg_orders",
-    "olist_products_dataset.csv": "stg_products",
-    "olist_sellers_dataset.csv": "stg_sellers",
-    "product_category_name_translation.csv": "stg_product_category_translation",
+    "olist_customers_dataset.csv": "stg_dim_customer",
+    "olist_geolocation_dataset.csv": "stg_dim_geolocation",
+    "olist_order_items_dataset.csv": "stg_fact_order_items",
+    "olist_order_payments_dataset.csv": "stg_fact_order_payments",
+    "olist_order_reviews_dataset.csv": "stg_fact_order_reviews",
+    "olist_orders_dataset.csv": "stg_fact_orders",
+    "olist_products_dataset.csv": "stg_dim_products",
+    "olist_sellers_dataset.csv": "stg_dim_sellers",
+    "product_category_name_translation.csv": "stg_dim_product_category_translation",
 }
 
 # ============================================================
@@ -54,15 +54,15 @@ datasets = {
 # ============================================================
 
 MASTER_UPSERT_TABLES = {
-    "stg_customers": "customer_id",
-    "stg_products": "product_id",
-    "stg_sellers": "seller_id",
-    "stg_product_category_translation": "product_category_name",
+    "stg_dim_customer": "customer_id",
+    "stg_dim_products": "product_id",
+    "stg_dim_sellers": "seller_id",
+    "stg_dim_product_category_translation": "product_category_name",
 }
 
 # Geolocation TIDAK di-upsert berdasarkan ZIP karena
 # geolocation_zip_code_prefix tidak unik.
-GELOCATION_TABLE = "stg_geolocation"
+GELOCATION_TABLE = "stg_dim_geolocation"
 
 # ============================================================
 # HELPER
@@ -246,7 +246,7 @@ def refresh_geolocation(file_path):
 
     print()
     print("=" * 70)
-    print("MASTER FULL REFRESH : stg_geolocation")
+    print("MASTER FULL REFRESH : stg_dim_geolocation")
     print("=" * 70)
 
     # --------------------------------------------------------
@@ -413,12 +413,12 @@ def create_order_id_temp_table(order_ids):
 
 def refresh_orders(file_path):
 
-    table_name = "stg_orders"
+    table_name = "stg_fact_orders"
     date_column = "order_purchase_timestamp"
 
     print()
     print("=" * 70)
-    print("REFRESH TRANSACTION : stg_orders")
+    print("REFRESH TRANSACTION : stg_fact_orders")
     print("=" * 70)
 
     # --------------------------------------------------------
@@ -438,7 +438,7 @@ def refresh_orders(file_path):
 
     execute_command(delete_sql)
 
-    print("Waiting mutation stg_orders...")
+    print("Waiting mutation stg_fact_orders...")
 
     wait_for_mutation(table_name)
 
@@ -513,7 +513,7 @@ def refresh_orders(file_path):
 
     print()
     print(
-        f"stg_orders completed: "
+        f"stg_fact_orders completed: "
         f"{total_rows:,} rows"
     )
     
@@ -703,11 +703,11 @@ if GELOCATION_TABLE in file_paths:
 
 print()
 print("#" * 70)
-print("# STEP 2 - IDENTIFY ORDERS 2024-2026")
+print("# STEP 2 - IDENTIFY ORDERS 2017")
 print("#" * 70)
 
 order_ids = get_period_order_ids(
-    file_paths["stg_orders"]
+    file_paths["stg_fact_orders"]
 )
 
 
@@ -721,7 +721,7 @@ print("# STEP 3 - REFRESH ORDERS")
 print("#" * 70)
 
 refresh_orders(
-    file_paths["stg_orders"]
+    file_paths["stg_fact_orders"]
 )
 
 
@@ -735,8 +735,8 @@ print("# STEP 4 - REFRESH ORDER ITEMS")
 print("#" * 70)
 
 refresh_child_transaction(
-    file_paths["stg_order_items"],
-    "stg_order_items",
+    file_paths["stg_fact_order_items"],
+    "stg_fact_order_items",
     order_ids
 )
 
@@ -751,8 +751,8 @@ print("# STEP 5 - REFRESH ORDER PAYMENTS")
 print("#" * 70)
 
 refresh_child_transaction(
-    file_paths["stg_order_payments"],
-    "stg_order_payments",
+    file_paths["stg_fact_order_payments"],
+    "stg_fact_order_payments",
     order_ids
 )
 
@@ -767,8 +767,8 @@ print("# STEP 6 - REFRESH ORDER REVIEWS")
 print("#" * 70)
 
 refresh_child_transaction(
-    file_paths["stg_order_reviews"],
-    "stg_order_reviews",
+    file_paths["stg_fact_order_reviews"],
+    "stg_fact_order_reviews",
     order_ids
 )
 
