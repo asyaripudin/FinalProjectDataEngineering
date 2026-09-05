@@ -1,4 +1,3 @@
----
 # Welcome to your prefect.yaml file! You can use this file for
 # storing and managing configuration for deploying your flows.
 # We recommend committing this file to source control along
@@ -9,11 +8,11 @@ name: FinalProjectDataEngineering
 prefect-version: 3.8.4
 
 # build section allows you to manage and build docker images
-build: null
+build:
 
 # push section allows you to manage if and how this project
 # is uploaded to remote locations
-push: null
+push:
 
 # pull section allows you to provide instructions for cloning
 # this project in remote locations
@@ -25,18 +24,34 @@ pull:
 # for deploying flows
 deployments:
 - name: olist-daily
-  version: null
+  version:
   tags: []
-  concurrency_limit: null
+  concurrency_limit:
   description: Olist ETL pipeline using Python, ClickHouse, dbt and Prefect
   entrypoint: prefect\olist_flow.py:olist_pipeline
   parameters: {}
   work_pool:
     name: olist-pool
-    work_queue_name: null
+    work_queue_name:
     job_variables: {}
   schedules:
   - cron: 30 15 * * *
+    timezone: Asia/Jakarta
+    day_or: true
+    active: true
+- name: olist-daily
+  version:
+  tags: []
+  concurrency_limit:
+  description: Olist ETL pipeline using Python, ClickHouse, dbt and Prefect
+  entrypoint: .\prefect\pipeline_flow.py:olist_pipeline
+  parameters: {}
+  work_pool:
+    name: olist-pool
+    work_queue_name:
+    job_variables: {}
+  schedules:
+  - cron: 0 8 * * *
     timezone: Asia/Jakarta
     day_or: true
     active: true

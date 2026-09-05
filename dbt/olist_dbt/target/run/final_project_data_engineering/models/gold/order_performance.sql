@@ -8,7 +8,7 @@
          
 
 
-        insert into `DataEngineeringDB`.`gold_order_performance__dbt_new_data_a93b0599_1afb_435e_8bb4_c0039bd64670`
+        insert into `DataEngineeringDB`.`gold_order_performance__dbt_new_data_bbd85723_232b_49c7_a077_76351881f046`
         ("order_id", "customer_id", "order_status", "is_delivered", "is_canceled", "order_purchase_timestamp", "order_approved_at", "order_delivered_customer_date", "approval_hours", "item_count", "total_price", "total_freight", "total_order_value", "unique_products", "unique_sellers", "total_payment", "payment_method_count", "payment_types", "avg_review_score", "review_count")
 
 WITH orders AS (

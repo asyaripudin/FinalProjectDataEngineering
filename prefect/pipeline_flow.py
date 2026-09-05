@@ -89,7 +89,6 @@ def load_olist():
 # TASK 3 - DBT RUN
 # stg -> dim/fact
 # ============================================================
-
 @task(
     name="DBT Run",
     retries=2,
@@ -101,20 +100,54 @@ def dbt_run():
     print("START TASK: DBT RUN")
     print("=" * 70)
 
-    result = subprocess.run( [str(DBT_EXE), "run"], 
-    cwd=str(DBT_PROJECT), 
-    capture_output=True, 
-    text=True )
-    
+    result = subprocess.run(
+        [str(DBT_EXE), "run"],
+        cwd=str(DBT_PROJECT),
+        capture_output=True,
+        text=True
+    )
+
+    print("========== DBT STDOUT ==========")
     print(result.stdout)
 
+    print("========== DBT STDERR ==========")
+    print(result.stderr)
+
+    print("========== DBT RETURN CODE ==========")
+    print(result.returncode)
+
     if result.returncode != 0:
-        print(result.stderr)
-        raise RuntimeError("dbt run failed.")
+        raise RuntimeError(
+            f"dbt run failed with return code {result.returncode}"
+        )
 
     print("=" * 70)
     print("DBT RUN SUCCESS")
     print("=" * 70)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # ============================================================
 # TASK 4 - DBT TEST
@@ -140,8 +173,9 @@ def dbt_test():
 
     if result.returncode != 0:
         print(result.stderr)
-        raise RuntimeError("dbt test failed.")
-
+        raise RuntimeError(
+            f"dbt test failed with return code {result.returncode}"
+    )
     print("=" * 70)
     print("DBT TEST SUCCESS")
     print("=" * 70)
